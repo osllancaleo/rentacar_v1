@@ -22,6 +22,7 @@ environments {
             username = "rentacar"
             password = "rentacar"
             url = "jdbc:oracle:thin:@localhost:1521:XE"
+            //url = "jdbc:oracle:thin:@10.31.87.191:1521:XE"
         }
     }
     // Entorno Test

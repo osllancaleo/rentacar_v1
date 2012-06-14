@@ -1,7 +1,7 @@
 package org.duoc.rentacar
 
 class Requestmap {
-
+        String nombre
 	String url
 	String configAttribute
 

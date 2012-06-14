@@ -13,7 +13,7 @@ class BootStrap {
     def init = { servletContext ->
         def rm = Requestmap.findByUrl('/login/**')?: new Requestmap(url:'/login/**',configAttribute:'IS_AUTHENTICATED_ANONYMOUSLY').save()
         def rm1 = Requestmap.findByUrl('/login/**')?:new Requestmap(url:'/logout/**',configAttribute:'IS_AUTHENTICATED_ANONYMOUSLY').save()
-        def rm2 = Requestmap.findByUrl('/**')?:new Requestmap(url:'/**',configAttribute:'ROLE_SUPERADMIN,ROLE_ADMIN,ROLE_AGENT').save()
+        //def rm2 = Requestmap.findByUrl('/**')?:new Requestmap(url:'/**',configAttribute:'ROLE_SUPERADMIN,ROLE_ADMIN,ROLE_AGENT').save()
        
         
         

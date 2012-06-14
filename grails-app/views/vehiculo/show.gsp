@@ -45,7 +45,7 @@
 				<li class="fieldcontain">
 					<span id="valorDia-label" class="property-label"><g:message code="vehiculo.valorDia.label" default="Valor Dia" /></span>
 					
-						<span class="property-value" aria-labelledby="valorDia-label"><g:fieldValue bean="${vehiculoInstance}" field="valorDia"/></span>
+						<span class="property-value" aria-labelledby="valorDia-label">$ <g:fieldValue bean="${vehiculoInstance}" field="valorDia"/></span>
 					
 				</li>
 				</g:if>
@@ -54,7 +54,7 @@
 				<li class="fieldcontain">
 					<span id="valorHora-label" class="property-label"><g:message code="vehiculo.valorHora.label" default="Valor Hora" /></span>
 					
-						<span class="property-value" aria-labelledby="valorHora-label"><g:fieldValue bean="${vehiculoInstance}" field="valorHora"/></span>
+						<span class="property-value" aria-labelledby="valorHora-label">$ <g:fieldValue bean="${vehiculoInstance}" field="valorHora"/></span>
 					
 				</li>
 				</g:if>

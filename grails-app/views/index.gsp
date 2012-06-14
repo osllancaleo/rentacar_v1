@@ -1,7 +1,9 @@
 <!doctype html>
+
 <html>
 	<head>
-		<meta name="layout" content="main"/>
+
+                <meta name="layout" content="main"/>
 		<title>rentacar .:. Sistema de Gestion de Rent a Car</title>
 		<style type="text/css" media="screen">
 			#status {
@@ -79,11 +81,34 @@
 				}
 			}
 		</style>
+            <script type="text/javascript" src="${resource(dir: 'js', file: 'jquery.js')}"></script>
+            <script type="text/javascript">
+              $(document).ready(function() {
+                cargaMenu()
+
+              });
+              function cargaMenu() {
+            $('#status').html('');
+            $.getJSON('${createLink(controller:"menu",action:"ListMenuJson")}', function(d) {
+                if (d.listaMenu > "0") {
+                    $.each(d.listaMenu, function(i, city) {
+                       // createListCities(city);
+                       var mensajeHTML = $('<br> <div id ="'+city.nombre+'"><a href="'+city.nombre+'" >'+city.nombre+'</a></div>');
+                        $('#status').append(mensajeHTML);
+
+                    });
+                }
+            });
+        }
+
+
+              </script>
+
 	</head>
 	<body>
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div id="status" role="complementary">
-              
+
 		<h2>Menu Principal</h2>
 				<ul>
 					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
